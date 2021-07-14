@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>openops</artifactId>
+        <groupId>org.xyz</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>openops-netty</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
+    <name>openops-netty</name>
+    <description>open ops manager netty</description>
+
+    <properties>
+        <jboss.marshalling.version>2.0.12.Final</jboss.marshalling.version>
+    </properties>
+
+    <dependencies>
+        <!-- netty -->
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.65.Final</version>
+        </dependency>
+
+        <!-- jboss marshalling-->
+        <!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling -->
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling</artifactId>
+            <version>${jboss.marshalling.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling-serial -->
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling-serial</artifactId>
+            <version>${jboss.marshalling.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+</project>

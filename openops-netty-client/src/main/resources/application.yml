@@ -1,0 +1,17 @@
+hostip: ${hostIP}
+
+
+logging:
+  level:
+    root: info
+
+netty:
+  client:
+    port: 6000
+  server:
+    host: 10.56.234.32
+    port: 9003
+
+spring:
+  application:
+    name: openops-netty-client

@@ -1,0 +1,67 @@
+hostip: ${hostIP}
+
+# sever 服务端相关配置
+server:
+  port: 9000    # 端口号
+  tomcat:
+    uri-encoding: utf-8 # tomcat uri 编码
+
+logging:
+  level:
+    root: info
+
+eureka:
+  instance:
+    prefer-ip-address: true  # 访问路径可以显示IP地址
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 10
+    instance-id: ${hostip}:${server.port}   #显示服务名称(ip:port集群需不同名,如果重复会覆盖之前的实例)
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+spring:
+  application:
+    name: openops-netty-server
+
+  redis:
+    database: 0
+    cluster:
+      nodes: 127.0.0.1:6001, 127.0.0.1:6002, 127.0.0.1:6003, 127.0.0.1:6004, 127.0.0.1:6005, 127.0.0.1:6006, 127.0.0.1:6007, 127.0.0.1:6008
+      max-redirects: 8
+    password:
+    connect-timeout: 3000
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 6
+        max-wait: -1
+        min-idle: 4
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092, 127.0.0.1:9093, 127.0.0.1:9094
+    consumer:
+      auto-offset-reset: earliest # 设置消费者分组最初的消费进度为 earliest 。可参考博客 https://blog.csdn.net/lishuangzhe7047/article/details/74530417 理解
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: org.xyz.api.entity
+
+    producer:
+      acks: 1 # 0-不应答。1-leader 应答。all-所有 leader 和 follower 应答。
+      retries: 3 # 发送失败时，重试发送的次数
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer  # 消息的 key 的序列化
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer # 消息的 value 的序列化
+      clientId: ${spring.application.name}
+      topic: openops-cmd-result
+
+    listener:
+      concurrency: 3
+      topic: netty#{'${hostip}'.replace('.', '-')}-${server.port}
+
+    topic:
+      auto-create:
+        partitions: 3
+        replicates: 3

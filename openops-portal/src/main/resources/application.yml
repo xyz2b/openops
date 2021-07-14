@@ -1,0 +1,48 @@
+
+# sever 服务端相关配置
+server:
+  port: 8081    # 端口号
+  tomcat:
+    uri-encoding: utf-8 # tomcat uri 编码
+
+logging:
+  level:
+    root: info
+
+eureka:
+  instance:
+    prefer-ip-address: true  # 访问路径可以显示IP地址
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+spring:
+  application:
+    name: openops-portal
+
+  redis:
+    database: 0
+    cluster:
+      nodes: 127.0.0.1:6001, 127.0.0.1:6002, 127.0.0.1:6003, 127.0.0.1:6004, 127.0.0.1:6005, 127.0.0.1:6006, 127.0.0.1:6007, 127.0.0.1:6008
+      max-redirects: 8
+    password:
+    connect-timeout: 3000
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 6
+        max-wait: -1
+        min-idle: 4
+  kafka:
+    bootstrap-servers:
+      - 127.0.0.1:9092
+      - 127.0.0.1:9093
+      - 127.0.0.1:9094
+    producer:
+      acks: 1 # 0-不应答。1-leader 应答。all-所有 leader 和 follower 应答。
+      retries: 3 # 发送失败时，重试发送的次数
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer  # 消息的 key 的序列化
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer # 消息的 value 的序列化
+      clientId: ${spring.application.name}

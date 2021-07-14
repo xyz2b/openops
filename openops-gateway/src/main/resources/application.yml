@@ -1,0 +1,45 @@
+logging:
+  level: debug
+
+server:
+  port: 8003
+
+spring:
+  application:
+    name: openops-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能
+          lowerCaseServiceId: true  #实例名自动小写
+  redis:
+    database: 0
+    cluster:
+      nodes: 127.0.0.1:6001, 127.0.0.1:6002, 127.0.0.1:6003, 127.0.0.1:6004, 127.0.0.1:6005, 127.0.0.1:6006, 127.0.0.1:6007, 127.0.0.1:6008
+      max-redirects: 8
+    password:
+    connect-timeout: 3000
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 6
+        max-wait: -1
+        min-idle: 4
+
+eureka:
+  instance:
+    prefer-ip-address: true  # 访问路径可以显示IP地址
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+
+#开启actuator管理api，后面要关闭
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

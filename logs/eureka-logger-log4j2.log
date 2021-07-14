@@ -1,0 +1,63 @@
+2021-07-12 09:39:51,977 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2021-07-12 09:39:52,082 INFO o.s.b.StartupInfoLogger [main] Starting OpenopsEurekaApplication using Java 1.8.0_281 on jiaohongyudeMacBook-Pro.local with PID 35234 (/Users/hongyujiao/Desktop/openops/openops-eureka/target/classes started by hongyujiao in /Users/hongyujiao/Desktop/openops)
+2021-07-12 09:39:52,088 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-07-12 09:39:53,264 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-12 09:39:53,268 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-12 09:39:53,305 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-07-12 09:39:53,588 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=13fab796-8310-38b7-b6c2-bef93d454653
+2021-07-12 09:39:54,031 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8000 (http)
+2021-07-12 09:39:54,048 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8000"]
+2021-07-12 09:39:54,048 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2021-07-12 09:39:54,049 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-12 09:39:54,147 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-07-12 09:39:54,148 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2006 ms
+2021-07-12 09:39:54,681 INFO c.s.j.s.i.a.WebApplicationImpl [main] Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2021-07-12 09:39:54,840 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2021-07-12 09:39:54,841 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2021-07-12 09:39:55,000 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2021-07-12 09:39:55,000 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2021-07-12 09:39:56,798 INFO o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses Jersey
+2021-07-12 09:39:56,856 WARN o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-07-12 09:39:56,875 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2021-07-12 09:39:56,917 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2021-07-12 09:39:56,917 INFO c.n.d.DiscoveryClient [main] Client configured to neither register nor query for data.
+2021-07-12 09:39:56,926 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1626053996925 with initial instances count: 0
+2021-07-12 09:39:56,959 INFO c.n.e.DefaultEurekaServerContext [main] Initializing ...
+2021-07-12 09:39:56,960 WARN c.n.e.c.PeerEurekaNodes [main] The replica size seems to be empty. Check the route 53 DNS Registry
+2021-07-12 09:39:56,976 INFO c.n.e.r.AbstractInstanceRegistry [main] Finished initializing remote region registries. All known remote regions: []
+2021-07-12 09:39:56,977 INFO c.n.e.DefaultEurekaServerContext [main] Initialized
+2021-07-12 09:39:56,983 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-07-12 09:39:57,052 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application OPENOPS-EUREKA with eureka with status UP
+2021-07-12 09:39:57,054 INFO o.s.c.n.e.s.EurekaServerBootstrap [Thread-21] Setting the eureka configuration..
+2021-07-12 09:39:57,054 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8000"]
+2021-07-12 09:39:57,071 INFO o.s.c.n.e.s.EurekaServerBootstrap [Thread-21] isAws returned false
+2021-07-12 09:39:57,072 INFO o.s.c.n.e.s.EurekaServerBootstrap [Thread-21] Initialized server context
+2021-07-12 09:39:57,072 INFO c.n.e.r.PeerAwareInstanceRegistryImpl [Thread-21] Got 1 instances from neighboring DS node
+2021-07-12 09:39:57,072 INFO c.n.e.r.PeerAwareInstanceRegistryImpl [Thread-21] Renew threshold is: 1
+2021-07-12 09:39:57,072 INFO c.n.e.r.PeerAwareInstanceRegistryImpl [Thread-21] Changing status to UP
+2021-07-12 09:39:57,081 INFO o.s.c.n.e.s.EurekaServerInitializerConfiguration [Thread-21] Started Eureka Server
+2021-07-12 09:39:57,082 INFO o.x.e.l.EurekaStateChangeListener [Thread-21] Eureka 注册中心可用事件
+2021-07-12 09:39:57,083 INFO o.x.e.l.EurekaStateChangeListener [Thread-21] Eureka Server启动事件
+2021-07-12 09:39:57,093 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8000 (http) with context path ''
+2021-07-12 09:39:57,094 INFO o.s.c.n.e.s.EurekaAutoServiceRegistration [main] Updating port to 8000
+2021-07-12 09:39:57,115 INFO o.s.b.StartupInfoLogger [main] Started OpenopsEurekaApplication in 5.722 seconds (JVM running for 6.963)
+2021-07-12 09:39:57,433 INFO o.a.j.l.DirectJDKLog [RMI TCP Connection(4)-127.0.0.1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-12 09:39:57,433 INFO o.s.w.s.FrameworkServlet [RMI TCP Connection(4)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
+2021-07-12 09:39:57,435 INFO o.s.w.s.FrameworkServlet [RMI TCP Connection(4)-127.0.0.1] Completed initialization in 1 ms
+2021-07-12 09:40:02,078 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 0ms
+2021-07-12 09:40:07,081 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 2ms
+2021-07-12 09:40:12,085 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 3ms
+2021-07-12 09:40:17,088 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 2ms
+2021-07-12 09:40:22,093 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 4ms
+2021-07-12 09:40:27,094 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 1ms
+2021-07-12 09:40:32,098 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 2ms
+2021-07-12 09:40:37,102 INFO c.n.e.r.AbstractInstanceRegistry$EvictionTask [Eureka-EvictionTimer] Running the evict task with compensationTime 4ms
+2021-07-12 09:40:40,362 INFO o.s.c.n.e.s.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application OPENOPS-EUREKA with eureka with status DOWN
+2021-07-12 09:40:40,384 INFO o.s.c.n.e.s.EurekaServerBootstrap [SpringApplicationShutdownHook] Shutting down Eureka Server..
+2021-07-12 09:40:40,399 INFO c.n.e.DefaultEurekaServerContext [SpringApplicationShutdownHook] Shutting down ...
+2021-07-12 09:40:40,416 INFO c.n.e.DefaultEurekaServerContext [SpringApplicationShutdownHook] Shut down
+2021-07-12 09:40:40,416 INFO o.s.c.n.e.s.EurekaServerBootstrap [SpringApplicationShutdownHook] Eureka Service is now shutdown...
+2021-07-12 09:40:40,417 INFO c.n.e.DefaultEurekaServerContext [SpringApplicationShutdownHook] Shutting down ...
+2021-07-12 09:40:40,426 INFO c.n.e.DefaultEurekaServerContext [SpringApplicationShutdownHook] Shut down
+2021-07-12 09:40:40,559 INFO c.n.d.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2021-07-12 09:40:40,559 INFO c.n.d.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
