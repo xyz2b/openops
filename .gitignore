@@ -128,3 +128,5 @@ fabric.properties
 # log
 logs
 logs/*
+**/.mvn
+**/target
