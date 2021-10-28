@@ -1,7 +1,0 @@
-org/xyz/netty/client/handler/HeartBeatReqHandler.class
-org/xyz/netty/client/ClientInitializer.class
-org/xyz/netty/client/handler/HeartBeatReqHandler$HeaderBeatTask.class
-org/xyz/netty/client/NettyClient.class
-org/xyz/netty/client/handler/OpenOpsRequestHandler.class
-org/xyz/netty/client/handler/LoginAuthReqHandler.class
-org/xyz/netty/client/ClientApplication.class
