@@ -19,6 +19,7 @@ import java.util.concurrent.*;
 @ChannelHandler.Sharable
 @Component
 public class OpenOpsRequestHandler extends ChannelDuplexHandler {
+    // TODO: 线程池数量动态计算，执行时长较长和执行时间较短的任务（通过超时时间判断，任务执行超时取消任务）
     private static ExecutorService executor = Executors.newFixedThreadPool(32);
 
     @Override
